@@ -63,8 +63,6 @@ function! bnext#Next(modified) abort
     let l:next = 0
   endif
 
-  echo l:list l:next
-
   if len(l:list) > 0
     call s:ChangeBuffer(l:list[l:next])
   endif 
