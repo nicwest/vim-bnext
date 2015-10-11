@@ -80,8 +80,6 @@ function! bnext#Previous(modified) abort
     let l:previous = len(l:list) - 1
   endif
 
-  echo l:list l:previous
-
   if len(l:list) > 0
     call s:ChangeBuffer(l:list[l:previous])
   endif 

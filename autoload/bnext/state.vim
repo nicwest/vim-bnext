@@ -8,7 +8,6 @@ function! s:NewGenericState() abort
   let l:state.bufs = []
 
   function! l:state.AddBuffer(bufnr) dict abort
-    "echom join(self.bufs, ", ")
     call self.RemoveBuffer(a:bufnr)
     if getbufvar(a:bufnr, "&buflisted")
       call insert(self.bufs, a:bufnr)
