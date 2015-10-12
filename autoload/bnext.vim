@@ -66,6 +66,8 @@ function! bnext#Next(modified) abort
 
   if len(l:list) > 0
     call s:ChangeBuffer(l:list[l:next])
+  else
+    call bnext#state#ClearReadOnly()
   endif 
 endfunction
 
@@ -84,6 +86,8 @@ function! bnext#Previous(modified) abort
 
   if len(l:list) > 0
     call s:ChangeBuffer(l:list[l:previous])
+  else
+    call bnext#state#ClearReadOnly()
   endif 
 endfunction
 
