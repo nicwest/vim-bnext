@@ -73,6 +73,7 @@ endfunction
 function! bnext#state#Update() abort
   if !g:bnext_state.read_only
     let l:bufnr = bufnr("%")
+    let b:bnext_state.time = localtime()
     call w:bnext_state.AddBuffer(l:bufnr)
     call g:bnext_state.AddBuffer(l:bufnr)
   endif

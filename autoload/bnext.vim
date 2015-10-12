@@ -62,6 +62,7 @@ function! bnext#Next(modified) abort
   if l:next > len(l:list)-1
     let l:next = 0
   endif
+  "echo l:bufnr l:list l:current l:next
 
   if len(l:list) > 0
     call s:ChangeBuffer(l:list[l:next])
@@ -79,6 +80,7 @@ function! bnext#Previous(modified) abort
   if l:previous < 0
     let l:previous = len(l:list) - 1
   endif
+  "echo l:bufnr l:list l:current l:previous
 
   if len(l:list) > 0
     call s:ChangeBuffer(l:list[l:previous])
